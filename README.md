@@ -26,7 +26,7 @@ services:
     MaillotF\Pcvue\PcvueBridgeBundle\Service\PcvueService: '@pcvue.service'
 ```
 
-##Package instalation with composer
+## Package instalation with composer
 
 ```console
 $ composer require maillotf/pcvue-bridge-bundle
