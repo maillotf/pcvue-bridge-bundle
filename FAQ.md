@@ -1,7 +1,7 @@
 # Frequently Asked Questions
 
-- [How to get variable path for realtime service ?](#how-to-get-variable-path-for-realtime-service)
-- [How to get the value for variable path in realtime service ?](#how-to-get-the-value-for-variable-path-in-realtime-service)
+- [How to get variable path for realtime service ?](#how-to-get-the-value-for-variable-path-in-realtime-service-)
+- [How to get the value for variable path in realtime service ?](#how-to-get-the-value-for-variable-path-in-realtime-service-)
 
 ## How to get variable path for realtime service ?
 
