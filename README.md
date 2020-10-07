@@ -1,4 +1,4 @@
-# Papercut-bridge-bundle
+# Pcvue-bridge-bundle
 
 Symfony bundle for PcVue client which is base on OAuth2 authentication
 
