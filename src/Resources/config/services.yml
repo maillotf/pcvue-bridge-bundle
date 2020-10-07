@@ -1,0 +1,29 @@
+services:
+    pcvue.manager.config:
+        class: MaillotF\Pcvue\PcvueBridgeBundle\Manager\Config
+        arguments:
+            - "%pcvue.authentication.protocol%"
+            - "%pcvue.authentication.host%"
+            - "%pcvue.authentication.port%"
+            - "%pcvue.authentication.client_id%"
+            - "%pcvue.authentication.client_secret%"
+            - "%pcvue.authentication.username%"
+            - "%pcvue.authentication.password%"
+            - "%pcvue.authentication.root_dir%"
+    pcvue.manager.manager:
+        class: MaillotF\Pcvue\PcvueBridgeBundle\Manager\Manager
+        arguments:
+            - "@pcvue.manager.config"
+    pcvue.service.historical:
+        class: MaillotF\Pcvue\PcvueBridgeBundle\Service\HistoricalService
+        arguments:
+            - "@pcvue.manager.manager"
+    pcvue.service.realtime:
+        class: MaillotF\Pcvue\PcvueBridgeBundle\Service\RealtimeService
+        arguments:
+            - "@pcvue.manager.manager"
+    pcvue.service.main:
+        class: MaillotF\Pcvue\PcvueBridgeBundle\Service\PcvueService
+        arguments:
+            - "@pcvue.service.historical"
+            - "@pcvue.service.realtime"
