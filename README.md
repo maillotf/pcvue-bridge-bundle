@@ -1,5 +1,9 @@
 # Papercut-bridge-bundle
 
+[![Software license][ico-license]](LICENSE)
+[![Latest stable][ico-version-stable]][link-packagist]
+![Packagist PHP Version Support][ico-php-version]
+
 Symfony bundle for PcVue client which is base on OAuth2 authentication
 
 ## Required configuration
@@ -59,3 +63,9 @@ class exampleController extends AbstractController
 
 ## FAQ
 You can get answer in the [FAQ](https://github.com/maillotf/pcvue-bridge-bundle/blob/master/FAQ.md)
+
+[ico-license]: https://img.shields.io/github/license/maillotf/pcvue-bridge-bundle.svg?style=flat-square
+[ico-version-stable]: https://img.shields.io/packagist/v/maillotf/pcvue-bridge-bundle
+[ico-php-version]: https://img.shields.io/packagist/php-v/maillotf/pcvue-bridge-bundle
+
+[link-packagist]: https://packagist.org/packages/maillotf/pcvue-bridge-bundle
