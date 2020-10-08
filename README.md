@@ -1,4 +1,4 @@
-# Papercut-bridge-bundle
+# Pcvue-bridge-bundle
 
 [![Software license][ico-license]](LICENSE)
 [![Latest stable][ico-version-stable]][link-packagist]
@@ -30,7 +30,7 @@ services:
     MaillotF\Pcvue\PcvueBridgeBundle\Service\PcvueService: '@pcvue.service'
 ```
 
-##Package instalation with composer
+## Package instalation with composer
 
 ```console
 $ composer require maillotf/pcvue-bridge-bundle
