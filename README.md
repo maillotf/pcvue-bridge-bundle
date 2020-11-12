@@ -27,7 +27,7 @@ root_dir is optional
 ### Modify services.yaml
 ```yaml
 services:
-    MaillotF\Pcvue\PcvueBridgeBundle\Service\PcvueService: '@pcvue.service'
+    MaillotF\Pcvue\PcvueBridgeBundle\Service\PcvueService: '@pcvue.service.main'
 ```
 
 ## Package instalation with composer
