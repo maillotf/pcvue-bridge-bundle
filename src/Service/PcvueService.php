@@ -35,7 +35,7 @@ class PcvueService implements PcVueInterface
 	/**
 	 * Define another historical service
 	 * 
-	 * @param \MaillotF\Pcvue\PcvueBridgeBundle\Service\HistoricalInterface $historical
+	 * @param HistoricalInterface $historical
 	 * @return type
 	 */
 	public function setHistorical(HistoricalInterface $historical): PcVueInterface
@@ -47,7 +47,7 @@ class PcvueService implements PcVueInterface
 	/**
 	 * Get the current historical service
 	 * 
-	 * @return \MaillotF\Pcvue\PcvueBridgeBundle\Service\HistoricalInterface
+	 * @return HistoricalInterface
 	 * @author Flavien Maillot 
 	 */
 	public function getHistorical(): HistoricalInterface

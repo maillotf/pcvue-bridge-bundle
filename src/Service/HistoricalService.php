@@ -5,6 +5,7 @@ namespace MaillotF\Pcvue\PcvueBridgeBundle\Service;
 use MaillotF\Pcvue\PcvueBridgeBundle\Manager\ManagerInterface;
 use MaillotF\Pcvue\PcvueBridgeBundle\Helpers\CastHelper;
 use MaillotF\Pcvue\PcvueBridgeBundle\Helpers\ClientHelper;
+use MaillotF\Pcvue\PcvueBridgeBundle\Objects\Result;
 use MaillotF\Pcvue\PcvueBridgeBundle\Objects\Trends;
 
 /**
@@ -36,7 +37,7 @@ class HistoricalService implements HistoricalInterface
 	 * 
 	 * 
 	 * @param ManagerInterface $manager
-	 * @return \MaillotF\Pcvue\PcvueBridgeBundle\Service\HistoricalService
+	 * @return HistoricalService
 	 * @author Flavien Maillot 
 	 */
 	public function setManager(ManagerInterface $manager): HistoricalInterface
@@ -145,9 +146,9 @@ class HistoricalService implements HistoricalInterface
 
 	/**
 	 * 
-	 * @return \MaillotF\Pcvue\PcvueBridgeBundle\Objects\Result
+	 * @return Result
 	 */
-	public function getStatus(): \MaillotF\Pcvue\PcvueBridgeBundle\Objects\Result
+	public function getStatus(): Result
 	{
 		$result = $this->manager->get('realtimedata/v2/Status')->getReponseFormated();
 		

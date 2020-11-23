@@ -3,6 +3,7 @@
 namespace MaillotF\Pcvue\PcvueBridgeBundle\Service;
 
 use MaillotF\Pcvue\PcvueBridgeBundle\Manager\ManagerInterface;
+use MaillotF\Pcvue\PcvueBridgeBundle\Objects\Result;
 use MaillotF\Pcvue\PcvueBridgeBundle\Objects\Variable;
 use MaillotF\Pcvue\PcvueBridgeBundle\Objects\Variables;
 use MaillotF\Pcvue\PcvueBridgeBundle\Objects\ConfigurationVariables;
@@ -25,11 +26,11 @@ interface RealtimeInterface
 
 	public function getProperties(string $variable_path): ?array;
 
-	public function getVariables(string $variable_path): Variables;
+	public function getVariables(string $variable_path): ?Variables;
 
 	public function getValues(string $id): ?Variable;
 
 	public function setValues(string $id, array $datas);
 
-	public function getStatus(): \MaillotF\Pcvue\PcvueBridgeBundle\Objects\Result;
+	public function getStatus(): Result;
 }

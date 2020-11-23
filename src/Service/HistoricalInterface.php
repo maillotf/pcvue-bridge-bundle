@@ -3,6 +3,7 @@
 namespace MaillotF\Pcvue\PcvueBridgeBundle\Service;
 
 use MaillotF\Pcvue\PcvueBridgeBundle\Manager\ManagerInterface;
+use MaillotF\Pcvue\PcvueBridgeBundle\Objects\Result;
 use MaillotF\Pcvue\PcvueBridgeBundle\Objects\Trends;
 
 /**
@@ -23,5 +24,5 @@ interface HistoricalInterface
 
 	public function getTrendsObject(string $idRequest, string $startdate, string $enddate): Trends;
 
-	public function getStatus(): \MaillotF\Pcvue\PcvueBridgeBundle\Objects\Result;
+	public function getStatus(): Result;
 }
