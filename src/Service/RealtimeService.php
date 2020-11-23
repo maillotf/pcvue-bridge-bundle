@@ -5,6 +5,7 @@ namespace MaillotF\Pcvue\PcvueBridgeBundle\Service;
 use MaillotF\Pcvue\PcvueBridgeBundle\Manager\ManagerInterface;
 use MaillotF\Pcvue\PcvueBridgeBundle\Helpers\ClientHelper;
 use MaillotF\Pcvue\PcvueBridgeBundle\Helpers\CastHelper;
+use MaillotF\Pcvue\PcvueBridgeBundle\Objects\Result;
 use MaillotF\Pcvue\PcvueBridgeBundle\Objects\Variable;
 use MaillotF\Pcvue\PcvueBridgeBundle\Objects\Variables;
 use MaillotF\Pcvue\PcvueBridgeBundle\Objects\ConfigurationVariables;
@@ -67,7 +68,7 @@ class RealtimeService implements RealtimeInterface
 	{
 		$result = $this->manager->get('realtimedata/v2/Configuration/Variables')->getReponseFormated();
 		if (is_array($result))
-			return (CastHelper::cast($result, 'Variables'));
+			return (CastHelper::cast($result, 'ConfigurationVariables'));
 		return (null);
 	}
 
@@ -114,7 +115,7 @@ class RealtimeService implements RealtimeInterface
 	 * @return Variables
 	 * @author Flavien Maillot 
 	 */
-	public function getVariables(string $variable_path): Variables
+	public function getVariables(string $variable_path): ?Variables
 	{
 		$result = $this->manager->get('realtimedata/v2/Variables/' . $variable_path)->getReponseFormated();
 		if (is_array($result))
@@ -162,9 +163,9 @@ class RealtimeService implements RealtimeInterface
 	
 	/**
 	 * 
-	 * @return \MaillotF\Pcvue\PcvueBridgeBundle\Objects\Result
+	 * @return Result
 	 */
-	public function getStatus(): \MaillotF\Pcvue\PcvueBridgeBundle\Objects\Result
+	public function getStatus(): Result
 	{
 		$result = $this->manager->get('realtimedata/v2/Status')->getReponseFormated();
 		
